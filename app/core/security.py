@@ -10,6 +10,7 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import os
 import structlog
+import hashlib
 
 logger = structlog.get_logger(__name__)
 
@@ -104,7 +105,6 @@ def decrypt_data(encrypted_data: str) -> str:
 
 
 def hash_sensitive_data(data: str, salt: str = None) -> str:
-    import hashlib
     if not salt:
         salt = os.getenv("HASH_SALT", "default_salt_change_me")
     combined = f"{data}{salt}"
