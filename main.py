@@ -54,7 +54,7 @@ app = FastAPI(
 
     ### Documentação Completa
 
-    Consulte [API_DOCUMENTATION.md](https://github.com/ArthurPaganoti/WildBank/API_DOCUMENTATION.md) para um guia detalhado de integração e uso.
+    Consulte [API_DOCUMENTATION.md](https://github.com/ArthurPaganoti/WildBank/README.md) para um guia detalhado de integração e uso.
     """,
     version="1.0.0",
     lifespan=lifespan,
